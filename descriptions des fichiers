@@ -1,0 +1,18 @@
+File descriptions
+TRAIN - le jeu d'apprentissage : traces d'utilisation du logiciel étiquetées TEST - le jeu de test : traces non étiquetées (vous devez prédire l'utilisateur) SAMPLE_SUBMISSION est le type de fichier que vous devez soumettre, avec vos prédictions pour le jeu de données de test.
+
+Données brutes d'entrée (TRAIN.CSV et TEST.CSV)
+Les fichiers de traces ont été extraits et parsés pour produire un fichier texte interprétable dans lequel chaque ligne indique les actions effectuées par un utilisateur au cours d'une seule session. Voici un exemple : sph,Firefox,Exécution d'un bouton(fr.infologic.core.client.modules.web.CopiloteWebSharedController)<DEFAUT>$AC$,t5,Exécution d'un bouton,t10 Les valeurs sont séparées par des virgules et indiquent :
+
+util: le premier champ donne l'ID unique de l'utilisateur (trigramme) qui a effectué la session (donné seulement dans le TRAIN.csv)
+navigateur: le deuxième champ donne le navigateur de la session courante (Firefox, Google Chrome, Opera ou Microsoft Edge)
+le reste des champs sont des actions effectuées par l'utilisateur sur le logiciel :
+par exemple "Création d'un écran", "Double-clic", "Chainage", "Lancement d'une action générique"
+si l'utilisateur navigue sur un autre écran, alors celui-ci est indiqué entre parenthèses : Création d'un écran(infologic.crm.modules.CRM_ANNUAIRE.AnnuaireController)
+si l'utilisateur change de configuration d'écran (conf écran), alors celle-ci est indiqué entre balises : Création d'un écran(infologic.core.gui.controllers.BlankController)<ACCUEIL_INST>
+si l'utilisateur travaille sur une fiche, alors la "chaîne" de la fiche (i.e. son regroupement logique au sein du logiciel) est indiqué entre dollars : Saisie dans un champ(MAINT)<DEF_03/24>$GP$
+enfin, si l'utilisateur est en modification dans la fiche, alors un "1" est ajouté à la fin de la trace : Saisie dans un champ1
+les traces incluent des champs tXX où XX est un nombre entier qui donne des fenêtres temporelles en secondes. Par exemple, toutes les actions avant t20 ont été effectuées avant 20 secondes de jeu, celles entre t20 et t30 ont été effectuées dans l'intervalle [20;30], …
+Le nombre de fenêtres temporelles et d'actions varie d'une ligne à l'autre, car les utilisateurs ne vont pas à la même vitesse et les sessions ne durent pas toutes le même temps.
+
+Remarque importante : après avoir lu la description des données, les participants doivent être en mesure de répondre à des questions telles que : De quels fichiers ai-je besoin ? Quel format de données dois-je m'attendre à trouver ? Que dois-je prédire ? Quels acronymes vais-je rencontrer ? Assurez-vous de connaître les réponses à ces questions, sinon demandez-les à votre professeur !
