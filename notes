@@ -7,3 +7,11 @@ Saisie dans un champ (MAINT)  <DEF_03/04>  $GP$               1
 			                    edition)
 								
 ecran specifié = changement de document
+
+exemple données à générer:
+
+combien d'utilisateurs differents ?
+combien d'actions differentes ?
+temps moyen d'une session / max / min / var /distribution
+nb d'action moyen / max / min / var /distribution
+nb d'action par seconde
