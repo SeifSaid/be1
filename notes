@@ -1,0 +1,9 @@
+t5 ... t10 ... t15 ...
+Format des traces
+
+Saisie dans un champ (MAINT)  <DEF_03/04>  $GP$               1
+    action            ecran    config     chaine / fiche      modif
+                               (ex:mode  (categorie de doc)  (chaine ouverte en mode edition)
+			                    edition)
+								
+ecran specifié = changement de document
