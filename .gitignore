@@ -1,3 +1,17 @@
 .venv/
 __pycache__/
 .ipynb_checkpoints/
+
+# données du challenge (à télécharger depuis Kaggle)
+data/
+
+# fichiers intermédiaires LaTeX
+rapport/*.aux
+rapport/*.log
+rapport/*.out
+rapport/*.toc
+rapport/*.bbl
+rapport/*.bcf
+rapport/*.blg
+rapport/*.run.xml
+rapport/*.synctex.gz
