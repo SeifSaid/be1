@@ -30,7 +30,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Ouvrir `analyse.ipynb` avec le noyau `.venv` et tout exécuter (environ 8 minutes). Le notebook écrit les deux fichiers de soumission.
+Ouvrir `analyse.ipynb` avec le noyau `.venv` et tout exécuter (environ 8 minutes). Le notebook écrit les deux fichiers de soumission et les figures du rapport.
 
 ## Démarche
 
